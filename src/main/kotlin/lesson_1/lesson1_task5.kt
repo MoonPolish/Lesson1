@@ -1,10 +1,13 @@
 package org.example.lesson_1
 
 fun main() {
-    val seconds = 6480
-    val minutes = seconds / 60
-    val hours = minutes / 60
-    val remainderOfTheHour = minutes % 60
+    val babylonianNumeral = 60
 
-    println("[0$hours:$remainderOfTheHour:00]")
+    val seconds = 6480
+    val minutes = seconds / babylonianNumeral
+    val hours = minutes / babylonianNumeral
+    val formattedHour = String.format("%02d", hours)
+    val remainderOfTheHour = minutes % babylonianNumeral
+
+    println("[$formattedHour:$remainderOfTheHour:00]")
 }
