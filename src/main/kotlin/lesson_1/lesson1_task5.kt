@@ -5,9 +5,9 @@ fun main() {
 
     val seconds = 6480
     val minutes = seconds / babylonianNumeral
+    val remainderSecondsOfTheMinutes = seconds % babylonianNumeral
     val hours = minutes / babylonianNumeral
-    val formattedHour = String.format("%02d", hours)
-    val remainderOfTheHour = minutes % babylonianNumeral
+    val remainderMinutesOfTheHour = minutes % babylonianNumeral
 
-    println("[$formattedHour:$remainderOfTheHour:00]")
+    println(String.format("[%02d:%02d:%02d]", hours, remainderMinutesOfTheHour, remainderSecondsOfTheMinutes))
 }
